@@ -1,0 +1,180 @@
+{
+  "info": {
+    "_postman_id": "95b483e9-4753-4a9e-ab1b-dc65ad537e83",
+    "name": "Reward Calculation API",
+    "description": "Collection to test the Reward Calculation API endpoints and scenarios.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "11540349"
+  },
+  "item": [
+    {
+      "name": "Get Rewards (Default - Last 3 Months)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/rewards/calculate",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "rewards",
+            "calculate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Rewards (with noOfMonths)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/rewards/calculate?numberOfMonths=6",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "rewards",
+            "calculate"
+          ],
+          "query": [
+            {
+              "key": "numberOfMonths",
+              "value": "6"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Rewards (with negative noOfMonths)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/rewards/calculate?numberOfMonths=6",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "rewards",
+            "calculate"
+          ],
+          "query": [
+            {
+              "key": "numberOfMonths",
+              "value": "-1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Rewards (Specific Date Range)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/rewards/calculate?startDate=2024-11-01&endDate=2025-01-31",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "rewards",
+            "calculate"
+          ],
+          "query": [
+            {
+              "key": "startDate",
+              "value": "2024-11-01"
+            },
+            {
+              "key": "endDate",
+              "value": "2025-01-31"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Error - No Transactions Found (404)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/rewards/calculate?startDate=2000-01-01&endDate=2000-01-31",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "rewards",
+            "calculate"
+          ],
+          "query": [
+            {
+              "key": "startDate",
+              "value": "2000-01-01"
+            },
+            {
+              "key": "endDate",
+              "value": "2000-01-31"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Error - Invalid Date Range (400)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/rewards/calculate?startDate=2025-03-02&endDate=2025-02-02",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "rewards",
+            "calculate"
+          ],
+          "query": [
+            {
+              "key": "startDate",
+              "value": "2025-03-02"
+            },
+            {
+              "key": "endDate",
+              "value": "2025-02-02"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+    "status": 400,
+    "message": "getRewards.numberOfMonths: numberOfMonths must be positive",
+    "timestamp": "2026-03-03T15:56:44.792808087"
+}

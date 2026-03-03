@@ -1,0 +1,5 @@
+{
+    "status": 400,
+    "message": "Start date cannot be after end date.",
+    "timestamp": "2026-03-02T19:20:32.211372805"
+}

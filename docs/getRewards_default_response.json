@@ -1,0 +1,26 @@
+[
+    {
+        "customerId": 1,
+        "monthlyRewards": {
+            "December": 0,
+            "January": 30,
+            "February": 90
+        },
+        "totalRewards": 120
+    },
+    {
+        "customerId": 2,
+        "monthlyRewards": {
+            "January": 25,
+            "February": 850
+        },
+        "totalRewards": 875
+    },
+    {
+        "customerId": 3,
+        "monthlyRewards": {
+            "March": 103
+        },
+        "totalRewards": 103
+    }
+]
